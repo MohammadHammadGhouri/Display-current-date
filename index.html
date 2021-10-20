@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1 id="date" style="text-align: center;"></h1>
+
+        <script>
+            setInterval(current_date, 1000);
+
+            function current_date() {
+                let mydate = new Date();
+                let mymonth = mydate.getMonth();
+                let mydate1 = mydate.getDate();
+                let myyear = mydate.getFullYear();
+
+
+                let r = `Current Time: ${mymonth+1} ${mydate1} ${myyear}`;
+                document.getElementById("date").innerHTML = r;
+            }
+        </script>
+    </body>
+
+</html>
